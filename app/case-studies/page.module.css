@@ -1,0 +1,158 @@
+.caseStudies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  
+  min-height: 100vh;
+  background-color:black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.filterButton {
+  background-color: var(--button-bg-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filterButton:hover,
+.filterButton.active {
+  background-color: red;
+  color: var(--button-hover-color);
+}
+
+.csimageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.csimageItem {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.csimageItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.csoverlayText {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.loadMoreContainer {
+  margin-top: 20px;
+  background-color: black;
+  width: 100%;
+  align-items: center;
+}
+
+.loadMoreButton {
+  background-color: black;
+  color: #f0ecec;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.loadMoreButton:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-color);
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: var(--footer-bg-color);
+  width: 100%;
+  text-align: center;
+}
+
+.contactButton {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footerLinks div h4 {
+  margin-bottom: 10px;
+}
+
+.footerLinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerLinks li {
+  margin: 5px 0;
+}
+
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .csimageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterButtons {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 769px) {
+  .csimageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .csimageGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+  .footer-right {
+  justify-content: right;
+  margin-top: 20px;
+}
