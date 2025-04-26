@@ -1,0 +1,220 @@
+/* General Styles */
+.main {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: #f9f6fc; /* Light Background */
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #6a0dad, #d4b5f6); /* Purple Gradient */
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .heroInner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .heroInner h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    font-weight: 700;
+  }
+  
+  .heroInner p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+  
+  /* Our Story Section */
+  .story {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .story h2 {
+    color: #6a0dad;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .story p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Core Services Section */
+  .services {
+    background: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .services h2 {
+    color: #6a0dad;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    color: #6a0dad;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  /* Core Values Section */
+  .values {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .values h2 {
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .values ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .values li {
+    margin-bottom: 1.5rem;
+  }
+  
+  .values strong {
+    display: block;
+    color: #6a0dad;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Client Carousel Section */
+  .clients {
+    padding: 3rem 0;
+    text-align: center;
+    background: #f9f6fc;
+  }
+  
+  .clients h2 {
+    color: #6a0dad;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .clientLogo {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+  
+  /* Contact Section */
+  .contact {
+    background: #fff;
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact h2 {
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form input,
+  .form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 1rem;
+  }
+  
+  .form button {
+    padding: 1rem;
+    background: #6a0dad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form button:hover {
+    background: #d4b5f6;
+  }
+  
+  .contactInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: left;
+  }
+  
+  .contactInfo h4 {
+    color: #6a0dad;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .contactInfo p {
+    font-size: 0.95rem;
+    color: #555;
+  }

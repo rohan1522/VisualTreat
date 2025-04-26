@@ -1,0 +1,77 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f9f6fc; /* Light background */
+  color: #333; /* Text color */
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #6a0dad; /* Purple */
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #555;
+}
+
+.categorySection {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #6a0dad;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imageItem {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imageItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageItem:hover img {
+  transform: scale(1.1);
+}
+
+.overlayText {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}

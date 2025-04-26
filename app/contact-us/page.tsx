@@ -1,128 +1,67 @@
-
-
-// 'use client';
-// import React from 'react';
-// import './page.module.css';
-
-// const ContactUsPage = () => {
-//   return (
-//     <div className="page-content">
-//       <h2>Let’s talk</h2>
-//       <p>Fill in the form below, or contact us directly – and we will get back to you as soon as possible.</p>
-
-//       <form className="contact-form">
-//         <div className="form-group">
-//           <label htmlFor="name">Name</label>
-//           <input type="text" id="name" name="name" required />
-//         </div>
-
-//         <div className="form-group">
-//           <label htmlFor="email">Email</label>
-//           <input type="email" id="email" name="email" required />
-//         </div>
-
-//         <div className="form-group">
-//           <label htmlFor="message">Message</label>
-//           <textarea id="message" name="message" rows={5} required></textarea>
-//         </div>
-
-//         <div className="form-group">
-//           <label htmlFor="file">File</label>
-//           <input type="file" id="file" name="file" />
-//           <small>Drop files here or click to upload</small>
-//         </div>
-
-//         <div className="form-group">
-//           <label>
-//             <input type="checkbox" required />
-//             I am human
-//           </label>
-//         </div>
-
-//         <div className="form-group">
-//           {/* Placeholder for FriendlyCaptcha */}
-//           <small>FriendlyCaptcha placeholder here</small>
-//         </div>
-
-//         <button type="submit">Submit</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default ContactUsPage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import React from 'react';
+// app/contact/page.tsx
+import Image from 'next/image';
 import styles from './page.module.css';
 
-const ContactPage = () => {
-  return (
-    <div className={styles.contactPage}>
-      <div className={styles.contactHeader}>
-        <h1>Let's talk</h1>
-        <p>Fill in the form below, or contact us directly - <a href="mailto:contact@xfive.co">contact@xfive.co</a> and we will get back to you as soon as possible.</p>
-      </div>
-      <div className={styles.contactForm}>
-        <form>
-          <div className={styles.formGroup}>
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="file">Upload File</label>
-            <input type="file" id="file" name="file" />
-          </div>
-          <div className={styles.formFooter}>
-            <div className={styles.captcha}>
-              <label>
-                <input type="checkbox" required />
-                I am human
-              </label>
-            </div>
-            <button type="submit" className={styles.submitButton}>Submit</button>
-          </div>
-        </form>
-        <div className={styles.contactInfo}>
-          <div className={styles.contactText}>
-            <h2>Hi, I'm Karolina. I look forward to discussing your project.</h2>
-          </div>
-          <div className={styles.contactImage}>
-            <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Karolina Brewczynska" />
-            <p>Karolina Brewczynska</p>
-            <p>Business Development Manager</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+export const metadata = {
+  title: 'Contact Us – VisualTreat',
+  description: 'Reach out to VisualTreat for design, printing, and event management solutions.',
 };
 
-export default ContactPage;
+export default function Contact() {
+  return (
+    <main className={styles.main}>
+      {/* Hero */}
+      <section className={styles.hero}>
+        <div className={styles.heroInner}>
+          <Image
+            src="/cropped-Logo_VisualTreat.png"
+            alt="VisualTreat Logo"
+            width={160}
+            height={60}
+          />
+          <h1>Let’s Get in Touch</h1>
+          <p>Have a project in mind? Fill out the form or use the info below—we’re here to help.</p>
+        </div>
+      </section>
+
+      {/* Contact Form & Info */}
+      <section className={styles.contactSection}>
+        <div className={styles.formContainer}>
+          <h2>Send a Message</h2>
+          <form className={styles.form}>
+            <input type="text" placeholder="Full Name *" required />
+            <input type="email" placeholder="Email Address *" required />
+            <input type="tel" placeholder="Phone Number" />
+            <textarea placeholder="Your Message *" rows={5} required />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div className={styles.infoContainer}>
+          <h2>Contact Information</h2>
+          <div className={styles.infoGrid}>
+            <div>
+              <h4>Address</h4>
+              <p>
+                Office No 5, Siddhartha Darshan,<br/>
+                Dada Patil Marg, near Railway Station,<br/>
+                Naupada, Thane West, Thane – 400602
+              </p>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 98198 39245</p>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>info@visualtreat.in</p>
+            </div>
+            <div>
+              <h4>Hours</h4>
+              <p>10:00 AM – 9:00 PM (Mon–Sat)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
