@@ -1,16 +1,28 @@
 'use client';
+import { useEffect, useState } from 'react';
 import './globals.css';
 import './layout.css';
 import { ModalProvider } from './components/BookDemoModal'; // Import the ModalProvider
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setScrolled(scrollTop > 50); // Add 'scrolled' class after 50px scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <html lang="en">
       <body>
-        <ModalProvider> {/* Wrap the layout with ModalProvider */}
+        <ModalProvider>
           <div className="layout-container">
-            <header className="site-header">
-              {/* Logo + Nav */}
+            <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
               <div className="header-inner">
                 <a href="/" className="logo">
                   <img src="/cropped-Logo_VisualTreat.png" alt="VisualTreat Logo" />

@@ -1,7 +1,6 @@
-/* General Styles */
 .main {
   font-family: 'Poppins', sans-serif;
-  background-color: #1a1a1a; /* Dark background */
+  background-color: #1a1a1a;
   color: #ffffff;
   overflow-x: hidden;
   padding: 0;
@@ -11,9 +10,10 @@
 /* Hero Section */
 .hero {
   display: grid;
+  min-height: calc(100vh - 80px);
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 120px 50px 50px; /* Add top padding to account for the header */
+  padding: 120px 50px 50px;
   gap: 20px;
   position: relative;
   z-index: 1;
@@ -31,7 +31,7 @@
 
 .heroContent .italic {
   font-style: italic;
-  color: #ff8c42; /* Orange */
+  color: #ff8c42;
 }
 
 .heroContent .bold {
@@ -47,19 +47,18 @@
 
 .bookDemoBtn {
   display: inline-block;
-  background-color: #ff8c42; /* Orange */
-  color: #1a1a1a; /* Dark text */
+  background-color: #ff8c42;
+  color: #1a1a1a;
   padding: 12px 24px;
   border-radius: 5px;
   font-weight: 600;
-  text-decoration: none;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .bookDemoBtn:hover {
-  background-color: #e6762b; /* Darker orange */
+  background-color: #e6762b;
   transform: scale(1.05);
 }
 
@@ -89,7 +88,7 @@
 }
 
 .carouselContainer:hover {
-  animation-play-state: paused; /* Pause animation on hover */
+  animation-play-state: paused;
 }
 
 .carouselItem {
@@ -101,21 +100,151 @@
   transform: scale(1.1);
 }
 
-/* Keyframes for scrolling */
 @keyframes scrollDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
 }
 
 @keyframes scrollUp {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+.clients {
+  padding: 50px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.clients h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Style each logo wrapper */
+.clientItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Optional: remove default gradient overlay */
+.marquee :global(.marquee-gradient) {
+  display: none;
+}
+.aboutVisualTreat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 6rem 4rem;
+  background-color: #f9f9f9; /* or keep white */
+}
+
+.aboutContent {
+  flex: 1;
+}
+
+.smallHeading {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #4b006e;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.aboutContent h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.aboutContent p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.aboutImage {
+  flex: 1;
+}
+
+.aboutImage img {
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+.featuresIntro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.featuresIntro h2 {
+  font-size: 2rem;
+  color: #4b006e; /* Matching your brand's primary color */
+}
+
+.featuresIntro p {
+  font-size: 1.125rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.featuresSection {
+  justify-content: space-between;
+  padding: 6rem 4rem;
+  gap: 2rem;
+  background-color: #ffffff;
+}
+
+.featureCardsWrapper {
+  display: flex;
+  flex-wrap: wrap; /* This ensures the cards wrap to the next line on smaller screens */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 2rem; /* Adds space between the cards */
+}
+
+.featureCard {
+  flex: 1;
+  background-color: #f5f5f5;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px; /* Fixed width for cards */
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.featureImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.featureContent {
+  padding: 2rem;
+}
+
+.featureContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #4b006e;
+}
+
+.featureContent p {
+  font-size: 1rem;
+  color: #555;
 }

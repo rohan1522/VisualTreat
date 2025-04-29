@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: [
       'images.pexels.com', 
+      'images.unsplash.com',
       'via.placeholder.com', 
       'source.unsplash.com' // Add this domain
     ],
